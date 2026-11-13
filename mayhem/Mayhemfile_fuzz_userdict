@@ -1,0 +1,9 @@
+project: savantenvs/cppjieba
+target: fuzz_userdict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_userdict/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_userdict
+    libfuzzer: true
+    timeout: 10
